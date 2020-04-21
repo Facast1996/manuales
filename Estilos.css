@@ -1,0 +1,331 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+
+body{
+	background: #DADADA;
+	margin: 5px;
+}
+
+
+header{
+	/*ancho de la etiqueta del menu*/
+	width: 100%;
+}
+
+
+/* Desaparecer boton*/
+.menu_bar{
+	display: none;
+}
+
+
+header nav{
+	width: 100%;
+	max-width: 2000px;
+	margin: none auto;
+	background: #024959;
+}
+
+
+header nav ul{
+	/* Eliminar continuidad del menu con el texto*/
+	overflow: hidden;
+	/*Eliminar viñetas del menu*/
+	list-style: none;
+}
+
+
+header nav ul li{
+	/*Poner menu consecutivo*/
+	float: left;
+	margin-right: 20px;
+	font-size: 30px;
+}
+
+
+header nav ul li a{
+	color: #000000;
+	/* Espacio arriba, abajo y lados funciona solo con etiqueta displey:block*/ 
+	padding: 20px;
+	display: block;
+	text-decoration: none;
+}
+
+
+header nav ul li span{
+	/*Espacio entre icnos*/
+	margin-right: 10px;
+}
+
+
+header nav ul li a:hover {
+	/* Color al sobreponer el clic*/
+	background: #FFF;
+}
+
+/* Tamaño de responsil*/
+@media screen and (max-width:850px ){
+	header nav{
+		width: 80%;
+		/* Etiqueta calc calcula el 100% de la pagina menos el pading
+		del .btn_menu*/
+		height: calc(100% - 20px);
+		/* Menu inicia a lado izquiero fuera de la pantalla*/
+		left: -100%; 
+		margin:0;
+		position: fixed;
+	}
+
+
+header nav ul li a{
+	font-size: 25px;
+}
+
+
+	header nav ul li{
+	/* Tomar todo lo que se pueda*/
+	    display: block;
+	    float: none;
+	    border-bottom: 1px solid;
+    } 
+
+    .menu_bar {
+    	/* Retornar boton en pantalla*/
+	    display: block;
+	    width: 100%;
+	    background: #ccc;
+	    font-size: 20px;
+	}
+
+
+	.menu_bar .btn_menu{
+		display: block;
+	    padding: 20px;
+	    background: #0D7C94;
+	    color: #024959;
+	    text-decoration: none;
+	    font-weight: bold;
+	    font-size: 20px;	    
+    }
+
+	/*Ajustar boton al lado izquierdo*/
+    .menu_bar span{
+    	float: right;
+    	font-size: 35px;
+    }
+
+
+}
+
+.titulo 
+{
+	color:#000E2C;
+	font-size: 35px;
+	font-family: Castellar,Times New Roman, Arial, Verdana;
+	text-align: center;
+}
+
+.subtitulo
+{
+	color:#000E2C;
+	font-size: 30px;
+	font-family: Castellar,Times New Roman, Arial, Verdana;
+	text-align: center;
+}
+
+.contenido
+{
+	color: #000E2C;
+	font-size: 25px;
+	font-family: Elephant,Times New Roman, Arial, Verdana;
+	padding: 20px;
+}
+
+.imgizquierda{
+	float: left;
+	max-width: 50%;
+}
+
+.imgderecha{
+	float: right;
+	max-width: 50%;
+}
+
+.imgcentro{
+	margin-right: 30%;
+	margin-left: 30%;
+	width: 40%;
+}
+
+.footer{
+	background: #1E19EC;
+	width: 100%;
+	max-height: 20%;
+	bottom: 0;
+	position: fixed; 
+}
+
+.social_bar{
+	/*Posicion fija en pantalla*/
+	position: fixed;
+	/*parte derecha de la pantalla*/
+	right: 0;
+	/*ajustar altura*/
+	top: 35%;
+	font-size: 1.5rem;
+	display: flex;
+	flex-direction: column;
+	/*alinear icomos hacia la parte inferior*/
+	align-items: flex-end;
+	/*pocisionar encima de los elementos de la pagina*/
+	z-index: 100;
+}
+
+.icon {
+	color: white;
+	text-decoration: none;
+	padding: .7rem;
+	display: flex;
+	/* Ajuste de animacion de iconos*/
+	transition: all .5s;
+}
+
+/* Ajuste de fondo de menu*/
+.icon-facebook2 {
+	background: #0017F0;
+}
+
+.icon-instagram {
+	background: #D700C5;
+}
+
+.icon-whatsapp {
+	background: #25B447;
+}
+
+.icon-youtube {
+	background: #FF0303;
+}
+
+.icon-twitter {
+	background: #17B8E0;
+}
+
+/*Ajuste de icono de inicio y final de la barra*/
+.icon:first-child {
+	border-radius: 1rem 0 0 0;
+}
+
+.icon:last-child {
+	border-radius: 0 0 0 1rem; 
+}
+
+/*Ajustes animaciones al sobreponer el mouse*/
+.icon:hover {
+	padding-right: 3rem;
+	border-radius: 1rem 0 0 1rem;
+	box-shadow: 0 0 .5rem rgba(0, 0, 0, 0.42);
+}
+
+footer#izquierda{
+	width: 50%;
+	background: #024959;
+	float: left;
+	text-align: center;
+	font-size: 20px;
+	font-family: Times New Roman;
+}
+
+footer#derecha{
+	width: 50%;
+	background: #01272F;
+	float: left;
+	text-align: center;
+	font-size: 20px;
+	font-family: Times New Roman;
+}
+
+/* Ediicon archivo html registros*/ 
+
+.registroempresa{
+	position: relative;
+	width: 600px;
+	height: 1450px;
+	/*separacion de contenido hacia arriba y izquierda*/
+	padding-top: 15px;
+	padding-left: 20px;
+	background: #fff;
+	/*borde redondo*/
+	border-radius: 10000px;
+	margin: auto;
+}
+
+.regsitroempleado{
+	position: relative;
+	width: 600px;
+	height: 1300px;
+	/*separacion de contenido hacia arriba y izquierda*/
+	padding-top: 15px;
+	padding-left: 20px;
+	background: #fff;
+	/*borde redondo*/
+	border-radius: 10000px;
+	margin: auto;
+}
+
+.tituloregistro{
+	color:#000000;
+	font-size:50px;
+	font-family:Blackadder ITC, Times New Roman, Arial;
+	text-align:center;
+}
+
+.cambioregistro{
+	color:#000000;
+	font-size:20px;
+	font-family:Arial;
+}
+
+div form p{
+	color: #000000;
+	font-family: Blackadder ITC, Times New Roman, Arial;
+	font-size: 25px;
+	padding: 15px;
+}
+
+div form label{
+	color: #D3D2D2;
+	font-family: Freestyle Script, Times New Roman, Arial;
+	font-size: 25px;
+	padding: 15px;
+}
+
+div form input{
+	font-family: Freestyle Script, Times New Roman, Arial;
+	font-size: 25px;
+	padding: 15px;
+}
+
+div form input[type=text]{
+	width:500px;
+}
+
+div form input[type=email]{
+	width: 500px;
+}
+
+div form input[type=submit]:hover{
+	background:#024959;
+	color: #fff;
+	position:static;
+}
+
+div form input[type=submit]{
+	margin-left: 25%;
+	margin-right: 50%;
+	width:250px;
+}
+/*Sintaxis comentarios css*/
